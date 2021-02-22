@@ -1,0 +1,42 @@
+.pet__container {
+  display: flex;
+  align-items: center;
+}
+.pet__description {
+  display: flex;
+
+  font-weight: 100px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.pet__description > p {
+  margin: 20px 50px;
+  text-align: center;
+}
+
+.pet__waitinglist {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-weight: 100px;
+  font-size: 1.4em;
+  color: white;
+  margin: 20px 50px;
+  text-align: center;
+}
+
+.pet__waitinglist > ul {
+  margin-bottom: 20px;
+}
+
+.login__signInButton {
+  background: #f0c14b;
+  border-radius: 2px;
+  width: 200px;
+  height: 30px;
+  border: 1px solid;
+  margin-top: 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  font-size: 0.7em;
+}
