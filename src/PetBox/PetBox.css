@@ -26,6 +26,10 @@
   color: #111;
 }
 
+.petbox > button:disabled {
+  opacity: 0.4;
+}
+
 .petbox__info {
   height: 100px;
   margin-bottom: 15px;

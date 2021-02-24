@@ -2,9 +2,18 @@ import React, { Component } from "react";
 import "./PetBox.css";
 
 class PetBox extends Component {
-  isAdoptable() {
-    return this.props.adoptable ? !!this.props.adoptable : false;
-  }
+  static defaultProps = {
+    pet: {
+      name: "",
+      age: "",
+      breed: "",
+      description: "",
+      gender: "",
+      imageURL: "",
+      story: "",
+    },
+  };
+
   render() {
     return (
       <div className="petbox">
@@ -22,8 +31,8 @@ class PetBox extends Component {
         </div>
 
         <button
-          onClick={this.props.adoptButtonClicked}
-          disabled={this.isAdoptable()}
+          onClick={() => this.props.handleAdoptClick(this.props.type)}
+          disabled={this.props.adoptable}
         >
           Adopt
         </button>
