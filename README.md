@@ -26,7 +26,3 @@ Petful is an application which allows users to get in line to adopt a dog or cat
 - RESTful API
 - Node & Express
 - Deployed Heroku
-<<<<<<< HEAD
-=======
-
->>>>>>> 10400850b93382c0b285cbee82d67d0a9865adf7
