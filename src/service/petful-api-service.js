@@ -1,8 +1,8 @@
-import API_ENDPOINT from "../config";
+import REACT_APP_API_BASE from "../config";
 
 const PetfulApiService = {
   getAllPets() {
-    return fetch(`${API_ENDPOINT}/pets`)
+    return fetch(`${REACT_APP_API_BASE}/pets`)
       .then((res) =>
         !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
       )
@@ -10,7 +10,7 @@ const PetfulApiService = {
   },
 
   getCat() {
-    return fetch(`${API_ENDPOINT}/cats`, {
+    return fetch(`${REACT_APP_API_BASE}/cats`, {
       headers: {},
     })
       .then((res) =>
@@ -20,7 +20,7 @@ const PetfulApiService = {
   },
 
   adoptCat() {
-    return fetch(`${API_ENDPOINT}/cats`, {
+    return fetch(`${REACT_APP_API_BASE}/cats`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -31,7 +31,7 @@ const PetfulApiService = {
   },
 
   getDog() {
-    return fetch(`${API_ENDPOINT}/dogs`, {
+    return fetch(`${REACT_APP_API_BASE}/dogs`, {
       headers: {},
     })
       .then((res) =>
@@ -41,7 +41,7 @@ const PetfulApiService = {
   },
 
   adoptDog() {
-    return fetch(`${API_ENDPOINT}/dogs`, {
+    return fetch(`${REACT_APP_API_BASE}/dogs`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json",
@@ -52,7 +52,7 @@ const PetfulApiService = {
   },
 
   getPeople() {
-    return fetch(`${API_ENDPOINT}/people`, {
+    return fetch(`${REACT_APP_API_BASE}/people`, {
       headers: {},
     })
       .then((res) =>
@@ -62,7 +62,7 @@ const PetfulApiService = {
   },
 
   postPeople(name) {
-    return fetch(`${API_ENDPOINT}/people`, {
+    return fetch(`${REACT_APP_API_BASE}/people`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -74,7 +74,7 @@ const PetfulApiService = {
   },
 
   deletePerson() {
-    return fetch(`${API_ENDPOINT}/people`, {
+    return fetch(`${REACT_APP_API_BASE}/people`, {
       method: "DELETE",
     }).then((res) =>
       !res.ok ? res.json().then((e) => Promise.reject(e)) : res.json()
@@ -82,7 +82,7 @@ const PetfulApiService = {
   },
 
   dequeuePet(pet) {
-    return fetch(`${API_ENDPOINT}/pets`, {
+    return fetch(`${REACT_APP_API_BASE}/pets`, {
       method: "DELETE",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ type: pet }),
